@@ -43,14 +43,28 @@ const analtyicsScript =
 const trackingID  = "'UA-########-#'";
 
 
-
+export default function render(req, res) {
+  res.status(200).send(`
+          <!doctype html>
+          <html ${header.htmlAttributes.toString()}>
+            <head>
+              ${header.title.toString()}
+              ${header.meta.toString()}
+              ${header.link.toString()}
+            </head>
+            <body>
+              YO!
+            </body>
+          </html>
+        `);
+}
 
 /*
  * Export render function to be used in server/config/routes.js
  * We grab the state passed in from the server and the req object from Express/Koa
  * and pass it into the Router.run function.
  */
-export default function render(req, res) {
+export function render2(req, res) {
   const authenticated = req.isAuthenticated();
   const history = createMemoryHistory();
   const store = configureStore({
