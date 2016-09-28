@@ -11,7 +11,6 @@
     "lint": "eslint app server",
     "clean": "rimraf public && rimraf compiled",
     "prestart": "npm run build:prod",
-    "start": "cross-env NODE_ENV=production node compiled/index.js",
     "start2": "cross-env NODE_ENV=production node compiled/index.js",
     "dev": "cross-env NODE_ENV=development nodemon",
     "build:dev": "cross-env NODE_ENV=development webpack --colors --config ./webpack/webpack.config.dev-server.js",
@@ -20,8 +19,9 @@
     "build": "npm run clean && npm run build:prod && npm run build:node",
     "test": "cross-env NODE_ENV=test karma start",
     "test:watch": "cross-env NODE_ENV=test npm test -- --watch --no-single-run",
-    "postinstall": "npm run build",
-    "keep-green": "git merge master && rm -rf node_modules && npm install && npm start"
+    "postinstall": "npm run build:prod",
+    "keep-green": "git merge master && rm -rf node_modules && npm install && npm start",
+    "start": "npm run build && node ./compiled/index.js"
   },
   "author": "Choon Ken Ding",
   "license": "MIT",
