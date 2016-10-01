@@ -1,0 +1,53 @@
+.eventCalendar-day{
+	display: inline-block;
+	width: 20%;
+    vertical-align: top;
+    height: 150px;
+    height: auto;
+    padding: 5px 5px;
+}
+
+.eventCalendar-weekdayLabel{
+	height: 10px;
+	text-transform: uppercase;
+    -webkit-user-select: none;
+}
+
+.eventCalendar-eventList{
+	list-style-type: none;
+	overflow: auto;
+    height: 150px;
+    margin-top: 5px;
+}
+
+.eventCalendar-event{
+    background-color: @color-bekk-black;
+    margin-top: 5px;
+    padding: 5px 5px;
+    display: block;
+    border-bottom: 1px solid @color-bekk-red;
+    transition: all .4s
+}
+.eventCalendar-event-title {
+  margin-bottom: 2px;
+}
+.eventCalendar-event:hover {
+  border-bottom: 1px solid @color-bekk-white;
+}
+
+.eventCalendar-event-tagContainer > li {
+    background-color: @color-bekk-dark-gray;
+    padding: 3px 4px;
+    display: inline-block;
+    margin-right: 4px;
+    margin-bottom: 6px;
+}
+
+.eventCalendar-event-categoryContainer{
+	text-align: right;
+}
+
+.eventCalendar-event-categoryContainer > li {
+	text-transform: uppercase;
+    padding: 2px 6px;
+}

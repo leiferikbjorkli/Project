@@ -1,0 +1,125 @@
+@import '../mixins/input.less';
+@import '../vars/colors.less';
+@import '../vars/type.less';
+
+.filter-container {
+    background-color: @color-bekk-light-gray;
+}
+
+.filters {
+    margin: 2em auto;
+    padding: 1em 0 1em 15px;
+    overflow: hidden;
+}
+
+.filter {
+    cursor: pointer;
+    font-size: @fontSize-large;
+    color: @color-bekk-black;
+    text-transform: uppercase;
+    float: left;
+    width: 20%;
+    margin: 0.5em 5% 0.5em 0;
+
+    span {
+        float: left;
+    }
+
+    .name {
+        width: 85%;
+        width: -webkit-calc(100%-15px);
+        width: -moz-calc(100%-15px);
+        width: calc(100%-15px);
+    }
+
+    .circle {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        margin: 1px 5px 5px 0;
+        background: @color-bekk-gray;
+        text-align: center;
+        vertical-align: middle;
+        .transition(background 0.3s ease-out);
+    }
+
+    &:hover {
+        .circle {
+            background: @color-bekk-dark-gray;
+        }
+    }
+
+    &:hover {
+        color: @color-bekk-red;
+    }
+
+    &.filter-active {
+        &:hover, &:focus {
+            color: @color-bekk-red;
+        }
+
+        .circle {
+            background: @color-bekk-red;
+        }
+    }
+}
+
+.tags-controls {
+    display: none;
+    padding-right: 25px;
+    position: relative;
+
+    .tags-expand {
+        float: right;
+        font-size: @fontSize-large;
+        cursor: pointer;
+
+        &:after {
+            position: absolute;
+            top: -2px;
+            right: 2px;
+            width: 12px;
+            height: 12px;
+            border-top: 2px solid @color-bekk-gray;
+            border-right: 2px solid @color-bekk-gray;
+            .transform(rotate(135deg) translateZ(0));
+            .transition(transform 0.3s ease-out, margin 0.3s ease-out);
+            content: "";
+        }
+
+        &.expanded:after {
+            margin-top: 8px;
+            .transform(rotate(-45deg)  translateZ(0));
+        }
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .filter {
+        width: 28%;
+    }
+}
+
+@media (max-width: 750px) {
+    .tags-controls {
+        display: block;
+    }
+
+    .filters {
+        display: none;
+
+        &.expanded {
+            display: block;
+        }
+    }
+    .filter {
+        width: 45%;
+    }
+}
+
+@media (max-width: 550px) {
+    .filter {
+        width: 95%;
+    }
+}

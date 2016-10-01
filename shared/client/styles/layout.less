@@ -1,0 +1,74 @@
+@import 'mixins/input.less';
+@import 'vars/colors.less';
+
+form {
+    input, textarea{
+        .inputStyling (100%);
+    }
+
+    textarea {
+        height: 500px;
+        line-height: 150%;
+    }
+
+}
+
+.data {
+    padding: 20px;
+}
+
+.data h2:first-child {
+    margin-top: 0;
+}
+
+.data h2 {
+    text-transform: uppercase;
+}
+
+.list {
+    margin: 0;
+    list-style: none;
+}
+
+.list-item {
+    margin: 10px;
+    display: inline-block;
+
+    a {
+        padding: 5px;
+        display: block;
+        color: @color-bekk-dark-gray;
+        text-decoration: none;
+    }
+}
+
+.list-item-selected {
+    a {
+        color: @color-bekk-red;
+    }
+}
+
+@media all and (min-width: 805px) {
+    .content {
+        flex-flow: row nowrap;
+    }
+
+    .left {
+        flex-grow: 3;
+    }
+
+    .list-item {
+        display: block;
+        margin: 0 0 10px 0;
+
+        a {
+            padding: 5px 0;
+            display: block;
+        }
+    }
+
+    .data {
+        padding: 50px;
+    }
+}
+

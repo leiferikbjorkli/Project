@@ -1,0 +1,57 @@
+@import 'vars/colors.less';
+@import 'vars/type.less';
+
+@size-sectionHeader: 30px;
+@maxWidth-grid: 50vw;
+@horizontalMargin-sectionHeader: 30px;
+
+.sectionHeader {
+    width: 100%;
+    overflow: hidden;
+    font-family: @font-sans;
+    font-size: @fontSize-largest;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.sectionHeader-content {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+
+    &:before,
+    &:after {
+        position: absolute;
+        top: @size-sectionHeader / 2 - 1px;
+        width: @maxWidth-grid;
+        height: 0;
+        border-top: 1px solid @color-bekk-dark-gray;
+        content: "";
+
+        .light & {
+            border-color: #000;
+        }
+    }
+
+    &:before {
+        right: 100%;
+        margin-right: @horizontalMargin-sectionHeader;
+    }
+
+    &:after {
+        left: 100%;
+        margin-left: @horizontalMargin-sectionHeader;
+    }
+}
+
+@media (max-width: 400px) {
+    .sectionHeader {
+        font-size: @fontSize-large;
+
+        .content:before, 
+        .content:after {
+            top: 9px;
+        }
+    }
+}

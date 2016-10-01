@@ -1,0 +1,21 @@
+.new-event {
+    display: inline-block;
+    position: absolute;
+}
+.new-event a {
+    font-size: @fontSize-large;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+    span {
+        border-bottom: 1px solid @color-bekk-white;
+    }
+
+    &:before {
+        content: '+ ';
+    }
+}
+
+.events {
+   margin-top: 100px;
+}
