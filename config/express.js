@@ -13,8 +13,8 @@ module.exports = function(app, config) {
   app.locals.ENV = env;
   app.locals.ENV_DEVELOPMENT = env == 'development';
   
-  app.set('views', config.root + '/frontend/views');
-  app.set('view engine', 'jade');
+  app.set('views', config.root + 'views');
+  app.set('view engine', 'html');
 
   // app.use(favicon(config.root + '/public/img/favicon.ico'));
   app.use(logger('dev'));
@@ -27,10 +27,10 @@ module.exports = function(app, config) {
   app.use(express.static(config.root + '/static'));
   app.use(methodOverride());
 
-  var controllers = glob.sync(config.root + '/frontend/controllers/*.js');
-  controllers.forEach(function (controller) {
-    require(controller)(app);
-  });
+  // var controllers = glob.sync(config.root + '/frontend/controllers/*.js');
+  // controllers.forEach(function (controller) {
+  //   require(controller)(app);
+  // });
 
   app.use(function (req, res, next) {
     var err = new Error('Not Found');
@@ -59,3 +59,5 @@ module.exports = function(app, config) {
   });
 
 };
+
+
