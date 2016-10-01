@@ -48,9 +48,7 @@
     "gulp-less": "^3.0.1",
     "gulp-nodemon": "2.2.1",
     "gulp-plumber": "^1.0.0",
-    "nodemon": "1.10.2"
-  },
-  "devDependencies": {
+    "nodemon": "1.10.2",
     "gulp-livereload": "^3.8.0",
     "eslint": "^3.5.0",
     "eslint-config-airbnb": "^10.0.0",
@@ -59,6 +57,9 @@
     "eslint-plugin-jsx-a11y": "^2.2.0",
     "stylelint": "^7.1.0",
     "stylelint-webpack-plugin": "^0.3.1"
+  },
+  "devDependencies": {
+    
   },
   "engines": {
     "node": "6.6.0"
