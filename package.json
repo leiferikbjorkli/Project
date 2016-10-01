@@ -42,7 +42,7 @@
     "immutable": "^3.7.6",
     "jquery": "2.2.0",
     "js-base64": "^2.1.9",
-    "lodash": "3.10.1",
+    "lodash": "4.16.2",
     "marked": "0.3.5",
     "method-override": "2.3.5",
     "moment": "2.11.1",
@@ -91,5 +91,8 @@
       "es2015",
       "react"
     ]
+  },
+  "engines": {
+    "node": "6.x"
   }
 }
