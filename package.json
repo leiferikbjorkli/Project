@@ -43,20 +43,20 @@
     "redux-thunk": "^2.0.1",
     "webpack": "^1.13.2",
     "webpack-dev-middleware": "^1.5.1",
-    "webpack-hot-middleware": "^2.12.2"
-  },
-  "devDependencies": {
+    "webpack-hot-middleware": "^2.12.2",
     "gulp": "^3.9.0",
     "gulp-less": "^3.0.1",
-    "gulp-nodemon": "^2.0.2",
-    "gulp-livereload": "^3.8.0",
+    "gulp-nodemon": "2.2.1",
     "gulp-plumber": "^1.0.0",
+    "nodemon": "1.10.2"
+  },
+  "devDependencies": {
+    "gulp-livereload": "^3.8.0",
     "eslint": "^3.5.0",
     "eslint-config-airbnb": "^10.0.0",
     "eslint-plugin-import": "^1.14.0",
     "eslint-plugin-react": "^6.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.0",
-    "nodemon": "^1.10.2",
     "stylelint": "^7.1.0",
     "stylelint-webpack-plugin": "^0.3.1"
   },
