@@ -67,9 +67,7 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0",
-    "winston": "2.1.1"
-  },
-  "devDependencies": {
+    "winston": "2.1.1",
     "chai": "^3.4.1",
     "chai-immutable": "^1.5.3",
     "eslint": "^2.11.1",
@@ -84,6 +82,9 @@
     "gulp-livereload": "3.8.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-notify": "2.2.0"
+  },
+  "devDependencies": {
+    
   },
   "babel": {
     "presets": [
