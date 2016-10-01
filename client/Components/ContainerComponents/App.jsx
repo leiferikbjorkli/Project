@@ -6,16 +6,16 @@ import { fetchGroupsIfNeeded } from './../../actions/groupsActions';
 
 
 class App extends React.Component {
-  componentDidMount() {
-    const { dispatch } = this.props;
-    dispatch(fetchEventsIfNeeded());
-    dispatch(fetchTagsIfNeeded());
-    dispatch(fetchGroupsIfNeeded());
-  }
+  // componentDidMount() {
+  //   const { dispatch } = this.props;
+  //   dispatch(fetchEventsIfNeeded());
+  //   dispatch(fetchTagsIfNeeded());
+  //   dispatch(fetchGroupsIfNeeded());
+  // }
   render() {
     return (
       <main>
-        {this.props.children}
+        YO WORLD!
       </main>
     );
   }

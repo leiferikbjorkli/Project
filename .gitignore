@@ -22,5 +22,5 @@ npm-debug.log
 .idea
 kompetanse.iml
 
-*node_modules
 static/
+node_modules/
