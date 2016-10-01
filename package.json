@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "postinstall": "gulp build",
+    "postinstall": "gulp build --production",
     "build": "gulp build --production",
     "start": "node index.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js 'test/**/*.@(js|jsx)'",
@@ -33,7 +33,7 @@
     "errorhandler": "1.4.2",
     "express": "4.13.3",
     "express-session": "1.13.0",
-    "gulp": "3.9.0",
+    "gulp": "3.9.1",
     "gulp-cssnano": "2.1.0",
     "gulp-less": "3.0.5",
     "gulp-if": "^2.0.1",
