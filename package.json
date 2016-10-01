@@ -7,7 +7,6 @@
     "doc": "docs"
   },
   "scripts": {
-    "postinstall": "gulp build --production",
     "build": "gulp build --production",
     "start": "node index.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js 'test/**/*.@(js|jsx)'",
