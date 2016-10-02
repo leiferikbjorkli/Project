@@ -1,3 +1,0 @@
-[template]
-src = "config.tmpl"
-dest = "/app/client/config.js"

@@ -24,14 +24,14 @@ const errorHandler = {
 };
 
 const paths = {
-  styleRoot: './shared/client/styles/app.less',
-  reactRoot: 'frontend/index.jsx',
-  lessFiles: './shared/client/styles/**/*.less',
+  styleRoot: 'frontend/styles/app.less',
+  reactRoot: 'frontend/react/index.jsx',
+  lessFiles: 'frontend/styles/**/*.less',
   outputFolder: 'static',
   jsBundle: 'app.min.js',
 };
 
-
+  
 function makeBrowserifyInstance() {
   return browserify({
     cache: {},
