@@ -15,7 +15,7 @@ module.exports = function(app, config) {
   app.locals.ENV = env;
   app.locals.ENV_DEVELOPMENT = env == 'development';
   
-  app.set('views', config.root + '/views');
+  app.set('views', config.root + '/backend/views');
   app.set('view engine', 'html');
   app.engine('html', consolidate.handlebars);
 
@@ -31,12 +31,10 @@ module.exports = function(app, config) {
   app.use(express.static(config.root + '/static'));
   app.use(methodOverride());
 
-  var controllers = glob.sync(config.root + '/frontend/controllers/*.js');
+  var controllers = glob.sync(config.root + '/backend/controllers/*.js');
   controllers.forEach(function (controller) {
     require(controller)(app);
   });
-
-  // app.use('/', routes);
 
   app.use(function (req, res, next) {
     var err = new Error('Not Found');

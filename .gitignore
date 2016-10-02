@@ -1,6 +1,3 @@
-dev.sh
-prod.sh
-
 lib-cov
 *.seed
 *.log

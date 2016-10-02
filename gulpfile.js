@@ -25,7 +25,7 @@ const errorHandler = {
 
 const paths = {
   styleRoot: './shared/client/styles/app.less',
-  reactRoot: 'client/index.jsx',
+  reactRoot: 'frontend/index.jsx',
   lessFiles: './shared/client/styles/**/*.less',
   outputFolder: 'static',
   jsBundle: 'app.min.js',
