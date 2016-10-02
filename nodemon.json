@@ -1,0 +1,3 @@
+{
+  "ignore": ["frontend/**/*.js", "frontend/**/*.jsx", "static/app.min.js", "app.min.js.map", "app.min.css"]
+}
