@@ -3,15 +3,22 @@ import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
 import configureStore from './configureStore';
-import App from './components/containers/App.jsx';
+import MainContainer from './components/containers/MainContainer.jsx';
 
 const store = configureStore();
 
 const routes =
 (
-  <Route path="/" component={App}>
-    <IndexRoute component={App} />
+  <Route path="/" component={MainContainer}>
+    <IndexRoute component={MainContainer} />
   </Route>
 );
 
-
+ReactDOM.render(
+  <Provider store={store}>
+    <Router>
+      {routes}
+    </Router>
+  </Provider>,
+  document.getElementById('app')
+);
